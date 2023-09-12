@@ -45,8 +45,14 @@ jobs:
     - name: Build with Maven
       run: mvn -B install -e --file pom.xml
       
-    - name: Upload JAR file
+    - name: Upload flyway-core JAR file
       uses: actions/upload-artifact@v2
       with:
-        name: artifact
-        path: flyway-core/flyway-core*.jar  
+        name: flyway-core
+        path: flyway-core/target/flyway-core-8.5.13.jar  
+
+    - name: Upload flyway-mysql JAR file
+      uses: actions/upload-artifact@v2
+      with:
+        name: flyway-mysql
+        path: flyway-mysql/target/flyway-mysql-8.5.13.jar      
