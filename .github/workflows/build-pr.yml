@@ -17,6 +17,8 @@
 name: Build PRs
 
 on:
+  watch:
+    types: started
   pull_request:
     branches:
       - 8.5.13.1
